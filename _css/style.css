@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+body {
+    background: url(../assets/bg.png) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+#background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+#top-nav {
+    display: flex;
+    width: 100vw;
+    height: 125px;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+}
+.top-nav.link {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.top-nav#title {
+    font-family: 'kilo';
+    font-size: 80px;
+}
+.top-nav.button > button {
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    border: 0px;
+    background-color: rgba(217, 217, 217, 0.01);
+    box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
+}
+#main-content * {
+    border: 1px solid #000;
+}
+#main-content {
+    border: 1px solid #f00;
+    display: flex;
+    height: calc(100vh - 125px);
+    flex-direction: column;
+}
+.main-content.subdivider {
+    flex-grow: 1;
+    display: flex;
+}
+.subdivider.left {
+    flex-grow: 1;
+}
+.subdivider.right {
+    flex-grow: 1;
+}
+.main-content.button {
+    position: absolute;
+    align-self: center;
+    justify-self: flex-end;
+    bottom: 0;
+    width: 200px;
+    height: 80px;
+}
