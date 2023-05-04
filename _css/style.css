@@ -1,3 +1,20 @@
+/*
+.parent {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(4, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 1 / 5 / 2 / 6; }
+.div2 { grid-area: 2 / 1 / 3 / 3; }
+.div3 { grid-area: 3 / 2 / 4 / 3; }
+.div4 { grid-area: 4 / 1 / 5 / 2; }
+.div5 { grid-area: 2 / 3 / 4 / 4; }
+.div6 { grid-area: 1 / 4 / 2 / 5; }
+*/
+
 @font-face {
     font-family: Kilo;
     src: url("../assets/Kilo.otf") format("opentype");
@@ -8,6 +25,14 @@
     box-sizing: border-box;
     font-family: consolas;
 }
+body::-webkit-scrollbar{
+    display: none;
+  }
+img {
+    visibility: hidden;
+    height: 0 !important;
+    width: 0 !important;
+}
 body {
     background: url(../assets/bg.png) no-repeat;
     background-size: cover;
@@ -17,16 +42,34 @@ body {
     overflow-x: hidden;
     width: 100vw;
 }
-#background {
-    position: absolute;
-    width: 100vw;
+#body-one{
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    z-index: -1;
+    width: 100vw;
 }
-#top-nav {
+.top-nav.default {
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+.top-nav.default {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     place-items: center;
+    place-content: center;
+}
+.top-nav.mobile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    place-content: center;
+    height: 50px;
+    width: 100vw;
+}
+.top-nav.mobile > img {
+    width: 50px;
+    height: auto;
 }
 .top-nav.link {
     text-decoration: none;
@@ -39,7 +82,28 @@ body {
     font-size: 80px;
     place-self: center center;
 }
-.top-nav.button > button {
+a.top-nav.menu-button-mobile ,
+a.top-nav.bag-button-mobile {
+    width: 50px;
+    height: 50px;
+}
+.top-nav.menu-button-mobile > button,
+.top-nav.bag-button-mobile > button {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-nav.menu-button-mobile > button > svg,
+.top-nav.bag-button-mobile > button > svg {
+    width: 60%;
+    height: auto;
+}
+.top-nav.github-button-default > button,
+.top-nav.bag-button-default > button {
     width: 120px;
     height: 50px;
     border-radius: 50px;
@@ -53,7 +117,8 @@ body {
     justify-content: center;
     align-items: center;
 }
-.top-nav.button > button > svg {
+.top-nav.github-button-default  > button > svg,
+.top-nav.bag-button-default  > button > svg {
     width: 30%;
     height: auto;
 }
@@ -63,15 +128,24 @@ body {
     justify-content: center;
     align-items: center;
     bottom: 0;
+    width: 100vw;
+    flex-grow: 1;
 }
 .main-content.subdivider {
     display: flex;
     width: 100%;
 }
 .subdivider.left {
+    height: 100%;
     flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25%);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 .subdivider.right {
+    height: 100%;
     flex-grow: 1;
 }
 .main-content.button {
@@ -105,18 +179,9 @@ body {
 }
 .main-content.subdivider > .subdivider.left,
 .main-content.subdivider > .subdivider.right {
-    display: grid;
+    height: max-content;
     width: 50%;
     overflow-y: visible;
-}
-.main-content.subdivider > .subdivider.left > .header {
-}
-.main-content.subdivider > .subdivider.left > .header > h1{
-    font-weight: 500;
-    font-size: 40px;
-}
-.main-content.subdivider > .subdivider.right {
-    display: grid;
 }
 .main-content.subdivider > .subdivider.left > .header > button {
     width: 250px;
@@ -130,10 +195,6 @@ body {
     box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     font-size: 40px;
-}
-.main-content.subdivider > .subdivider.left > img,
-.main-content.subdivider > .subdivider.right > img{
-    position: absolute;
 }
 .main-content.subdivider > .subdivider.left > img.bubble {
     width: 400px;
@@ -211,21 +272,15 @@ body {
         transform: translateY(10px) rotate(8deg);
     }
 }
-@media (min-width: 280px) {
-    #top-nav {
-        grid-template-columns: 1fr 1fr;
+@media (min-width: 700px) {
+    .top-nav.default {
+        visibility: visible !important;
+        width: 100vw !important;
+        height: auto !important
     }
-    .top-nav#title {
-        order: 1;
-        grid;
-        font-size: 55px;
-    }
-    .top-nav.link {
-        order: 2;
-    }
-    .top-nav.button {
-        visibility: hidden;
-        width: 0;
-        height: 0;
+    .top-nav.mobile {
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
     }
 }
