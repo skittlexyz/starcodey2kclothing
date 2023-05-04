@@ -15,6 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    width: 100vw;
 }
 #background {
     position: absolute;
@@ -23,12 +24,9 @@ body {
     z-index: -1;
 }
 #top-nav {
-    display: flex;
-    width: 100vw;
-    height: 125px;
-    justify-content: center;
-    align-items: center;
-    gap: 190px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
 }
 .top-nav.link {
     text-decoration: none;
@@ -39,6 +37,7 @@ body {
 .top-nav#title {
     font-family: Kilo;
     font-size: 80px;
+    place-self: center center;
 }
 .top-nav.button > button {
     width: 120px;
@@ -58,21 +57,16 @@ body {
     width: 30%;
     height: auto;
 }
-#main-content * {
-    /* border: 1px solid #000; */
-}
 #main-content {
-    /* border: 1px solid #f00; */
     display: flex;
-    height: calc(100vh - 125px);
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    bottom: 0;
 }
 .main-content.subdivider {
-    width: 80%;
-    flex-grow: 1;
     display: flex;
+    width: 100%;
 }
 .subdivider.left {
     flex-grow: 1;
@@ -87,7 +81,6 @@ body {
     bottom: 0;
     width: 200px;
     height: 80px;
-    margin-bottom: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,26 +96,29 @@ body {
     box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+* {
+    border: 1px solid #f00;
+}
 .main-content.button > button > svg {
     width: 25%;
     height: auto;
 }
 .main-content.subdivider > .subdivider.left,
 .main-content.subdivider > .subdivider.right {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     width: 50%;
     overflow-y: visible;
 }
-.main-content.subdivider > .subdivider.left > h1{
-    margin-top: 150px;
+.main-content.subdivider > .subdivider.left > .header {
+}
+.main-content.subdivider > .subdivider.left > .header > h1{
     font-weight: 500;
     font-size: 40px;
 }
 .main-content.subdivider > .subdivider.right {
     display: grid;
 }
-.main-content.subdivider > .subdivider.left > button {
+.main-content.subdivider > .subdivider.left > .header > button {
     width: 250px;
     height: 80px;
     margin-top: 10px;   
@@ -140,10 +136,7 @@ body {
     position: absolute;
 }
 .main-content.subdivider > .subdivider.left > img.bubble {
-    width: 500px;
-    align-self: flex-start;
-    bottom: 0;
-    margin-bottom: 70px;
+    width: 400px;
     animation: 6s breathOne infinite ease-in-out;
 }
 .main-content.subdivider > .subdivider.left > img.star,
@@ -155,22 +148,14 @@ body {
     width: 125px;
 }
 .main-content.subdivider > .subdivider.left > img.star#first{
-    bottom: 0;
-    margin: 80px 10px;
     animation: 6s breathTwo infinite ease-in-out;
 }
 .main-content.subdivider > .subdivider.left > img.star#second{
     -webkit-filter: blur(10px);
     filter: blur(10px);
-    align-self: flex-end;
-    width: 400px;
-    margin: 200px 30px;
-    bottom: 0;
     animation: 6s breathThree infinite ease-in-out;
 }
 .main-content.subdivider > .subdivider.left > img.star#third {
-    align-self: flex-end;
-    margin-top: 80px;
     animation: 6s breathTwo infinite ease-in-out;
 }
 .main-content.subdivider > .subdivider.right > img.cloth {
@@ -178,23 +163,13 @@ body {
     -webkit-filter: drop-shadow(0px 0px 10px #222);
     filter: drop-shadow(0px 0px 10px #222);
     animation: 6s breathOne infinite ease-in-out;
-    align-self: center;
-    justify-self: center;
-    margin-right: -80px;
 }
 .main-content.subdivider > .subdivider.right > img.star#fourth {
     animation: 6s breathThree infinite ease-in-out;
-    place-self: start end;
-    margin-top: 50px;
-    margin-right: 20px;
     z-index: -1;
 }
 .main-content.subdivider > .subdivider.right > img.star#fifth {
     animation: 6s breathTwo infinite ease-in-out;
-    align-self: flex-start;
-    bottom: 0;
-    margin-bottom: 130px;
-    margin-left: 80px;
     z-index: -1;
 }
 #footer {
@@ -236,7 +211,21 @@ body {
         transform: translateY(10px) rotate(8deg);
     }
 }
-/*
--webkit-filter: drop-shadow(5px 5px 5px #222);
-  filter: drop-shadow(5px 5px 5px #222);
-  */
+@media (min-width: 280px) {
+    #top-nav {
+        grid-template-columns: 1fr 1fr;
+    }
+    .top-nav#title {
+        order: 1;
+        grid;
+        font-size: 55px;
+    }
+    .top-nav.link {
+        order: 2;
+    }
+    .top-nav.button {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
