@@ -7,12 +7,11 @@ grid-column-gap: 0px;
 grid-row-gap: 0px;
 }
 
-.div1 { grid-area: 1 / 5 / 2 / 6; }
-.div2 { grid-area: 2 / 1 / 3 / 3; }
+.div1 { grid-area: 2 / 1 / 3 / 3; }
+.div2 { grid-area: 2 / 3 / 4 / 4; }
 .div3 { grid-area: 3 / 2 / 4 / 3; }
 .div4 { grid-area: 4 / 1 / 5 / 2; }
-.div5 { grid-area: 2 / 3 / 4 / 4; }
-.div6 { grid-area: 1 / 4 / 2 / 5; }
+.div5 { grid-area: 1 / 4 / 2 / 5; }
 */
 
 @font-face {
@@ -28,13 +27,13 @@ grid-row-gap: 0px;
 body::-webkit-scrollbar{
     display: none;
   }
-img {
+/* img, .cloth {
     visibility: hidden;
-    height: 0 !important;
-    width: 0 !important;
-}
+    height: 20% !important;
+    width: auto !important;
+} */
 body {
-    background: url(../assets/bg.png) no-repeat;
+    background: #fff url(../assets/bg.png) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -127,26 +126,33 @@ a.top-nav.bag-button-mobile {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    bottom: 0;
     width: 100vw;
     flex-grow: 1;
 }
 .main-content.subdivider {
     display: flex;
     width: 100%;
+    overflow: hidden;
 }
 .subdivider.left {
-    height: 100%;
+    height: 100% !important;
     flex-grow: 1;
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(5, 20%);
     grid-template-rows: repeat(4, 25%);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    place-items: center;
 }
 .subdivider.right {
-    height: 100%;
+    height: 100% !important;
     flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    place-items: center;
 }
 .main-content.button {
     position: absolute;
@@ -183,6 +189,14 @@ a.top-nav.bag-button-mobile {
     width: 50%;
     overflow-y: visible;
 }
+.main-content.subdivider > .subdivider.left > .header {
+    grid-area: 2 / 1 / 3 / 3;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: fit-content;
+    place-self: start start;
+    grid-column-start: 2;
+}
 .main-content.subdivider > .subdivider.left > .header > button {
     width: 250px;
     height: 80px;
@@ -199,39 +213,58 @@ a.top-nav.bag-button-mobile {
 .main-content.subdivider > .subdivider.left > img.bubble {
     width: 400px;
     animation: 6s breathOne infinite ease-in-out;
+    grid-area: 3 / 2 / 4 / 3;
+    grid-column-start: 3;
+    z-index: -1;
 }
 .main-content.subdivider > .subdivider.left > img.star,
 .main-content.subdivider > .subdivider.right > img.star {
-    -webkit-filter: blur(5px);
-    filter: blur(5px);
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
     mix-blend-mode: color-burn;
     opacity: 0.8;
     width: 125px;
 }
 .main-content.subdivider > .subdivider.left > img.star#first{
+    position: static;
+    -webkit-filter: blur(10px);
+    z-index: 0;
+    filter: blur(10px);
     animation: 6s breathTwo infinite ease-in-out;
+    grid-area: 1 / 3 / 4 / 4;
+    grid-column-start: 4;
+    width: 35vh;
+    height: auto;
+    margin
 }
 .main-content.subdivider > .subdivider.left > img.star#second{
-    -webkit-filter: blur(10px);
-    filter: blur(10px);
-    animation: 6s breathThree infinite ease-in-out;
+    animation: 6s breathTwo infinite ease-in-out;
+    grid-area: 4 / 1 / 5 / 2;
+    grid-column-start: 2    ;
 }
 .main-content.subdivider > .subdivider.left > img.star#third {
-    animation: 6s breathTwo infinite ease-in-out;
+    animation: 6s breathThree infinite ease-in-out;
+    grid-area: 1 / 4 / 2 / 5;
+    grid-column-start: 5;
 }
 .main-content.subdivider > .subdivider.right > img.cloth {
-    position: static !important;
+    position: absolute !important;
     -webkit-filter: drop-shadow(0px 0px 10px #222);
     filter: drop-shadow(0px 0px 10px #222);
     animation: 6s breathOne infinite ease-in-out;
+    grid-area: 2 / 2 / 3 / 3;
+    width: 50vh;
+    height: auto;
 }
 .main-content.subdivider > .subdivider.right > img.star#fourth {
     animation: 6s breathThree infinite ease-in-out;
     z-index: -1;
+    grid-area: 3 / 1 / 4 / 2;
 }
 .main-content.subdivider > .subdivider.right > img.star#fifth {
     animation: 6s breathTwo infinite ease-in-out;
     z-index: -1;
+    grid-area: 1 / 3 / 2 / 4;
 }
 #footer {
     height: 100vh;
@@ -272,7 +305,7 @@ a.top-nav.bag-button-mobile {
         transform: translateY(10px) rotate(8deg);
     }
 }
-@media (min-width: 700px) {
+@media (min-width: 1130px) {
     .top-nav.default {
         visibility: visible !important;
         width: 100vw !important;
