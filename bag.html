@@ -8,22 +8,50 @@
     <link rel="stylesheet" href="./_css/style.css">
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <style>
-      body {
-        overflow: visible;
+      #mobile > form,
+      #mobile,
+      #main-content > form,
+      #main-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 5px;
+        margin-top: 5vh;
       }
-      #body-one {
-        overflow: visible;
-        height: fit-content;
+      #mobile > form,
+      #main-content > form {
+        margin: 20px 0px;
       }
-      #main-content > p {
-        width: 66vw;
+      #mobile > form > label,
+      #main-content > form > label {
+        font-size: 18px;
+        margin-bottom: 2px;
       }
-      #mobile > div > p {
-        text-align: left;
+      #mobile > form > label:nth-child(3),
+      #main-content > form > label:nth-child(3) {
+        margin-top: 10px;
       }
-      #mobile {
-        margin: 100px 0px;
+      #mobile > form > input,
+      #main-content > form > input {
+        background-color: rgb(0, 0, 0, 0);
+        padding: 2px 10px;
+        border-radius: 100px;
+        border: 1px solid #000;
+        height: 30px;
+        width: 300px;
+        font-size: 20px;
       }
+      #mobile > button,
+      #main-content > button {
+        background-color: rgb(0, 0, 0, 0);
+        padding: 2px 10px;
+        border-radius: 100px;
+        border: 1px solid #000;
+        height: 30px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      
     </style>
 </head>
 <body>
@@ -71,22 +99,24 @@
         </nav>
         <nav></nav>
         <main id="main-content" class="default">
-          <h2>sobre nós*+!</h2>
-            <p>Acreditamos que a moda é mais do que apenas roupas - é uma forma de expressão e uma maneira de contar histórias. Desde a nossa fundação, nos esforçamos para criar roupas que não apenas pareçam boas, mas também sejam duráveis, confortáveis e feitas com materiais sustentáveis e responsáveis.
-                <br>
-                Somos uma empresa de roupas comprometida com a qualidade e a inovação. Na nossa loja, você encontrará roupas para todas as ocasiões, desde roupas casuais até roupas de festa. Oferecemos uma ampla variedade de opções para que você possa escolher o estilo que melhor se adapta ao seu gosto.
-                <br>
-                Estamos animados para compartilhar nossa visão com você. Obrigado por nos escolher como sua marca de roupas preferida.</p>
+          <h1>Login / Cadastro</h1>
+          <form action="#">
+            <label for="email-input">Digite seu email:</label>
+            <input type="email" name="email-input" id="email-input">
+            <label for="pass-input">Digite sua senha:</label>
+            <input type="password" name="pass-input" id="pass-input">
+          </form>
+          <button onclick="window.location.replace('index.html');">Login</button>
         </main>
         <main id="mobile">
-            <div class="header">
-              <h2>sobre nós*+!</h2>
-            <p>Acreditamos que a moda é mais do que apenas roupas - é uma forma de expressão e uma maneira de contar histórias. Desde a nossa fundação, nos esforçamos para criar roupas que não apenas pareçam boas, mas também sejam duráveis, confortáveis e feitas com materiais sustentáveis e responsáveis.
-                <br>
-                Somos uma empresa de roupas comprometida com a qualidade e a inovação. Na nossa loja, você encontrará roupas para todas as ocasiões, desde roupas casuais até roupas de festa. Oferecemos uma ampla variedade de opções para que você possa escolher o estilo que melhor se adapta ao seu gosto.
-                <br>
-                Estamos animados para compartilhar nossa visão com você. Obrigado por nos escolher como sua marca de roupas preferida.</p>
-            </div>
+          <h1>Login / Cadastro</h1>
+          <form action="#">
+            <label for="email-input">Digite seu email:</label>
+            <input type="email" name="email-input" id="email-input">
+            <label for="pass-input">Digite sua senha:</label>
+            <input type="password" name="pass-input" id="pass-input">
+          </form>
+          <button onclick="window.location.replace('index.html');">Login</button>
         </main>
     </div>
     <script>

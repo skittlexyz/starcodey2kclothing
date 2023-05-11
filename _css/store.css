@@ -1,0 +1,78 @@
+#body-one {
+  height: initial;
+  overflow-y: visible;
+}
+#main-content {
+  width: 100vw;
+}
+#filter-box {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#filter-box > label {
+  font-size: 18px;
+}
+#cloth-list {
+  margin: 0px 10px;
+  text-align: center;
+  background-color: rgb(0, 0, 0, 0);
+  padding: 2px;
+  border-radius: 100px;
+  border: 1px solid #000;
+  height: 30px;
+}
+#apply-filter {
+  text-align: center;
+  background-color: rgb(0, 0, 0, 0);
+  padding: 2px 10px;
+  border-radius: 100px;
+  border: 1px solid #000;
+  height: 30px;
+}
+#cloth-list-grid {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1vw;
+  margin-bottom: 5vw;
+}
+.card {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-image {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.card-image:hover {
+  width: 90%;
+}
+@media (max-width: 400px) {
+  .card {
+    width: 250px;
+  }
+}
+@media (max-width: 1130px) {
+  body {
+    overflow: visible;
+  }
+  #body-one {
+      height: 100vh;
+      overflow: visible ;
+      height: fit-content;
+  }
+  #main-content.default {
+      height: initial;
+      width: 100vw;
+      visibility: visible;
+  }
+}
