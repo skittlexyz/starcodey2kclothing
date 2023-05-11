@@ -1,0 +1,354 @@
+[
+  [
+    "accessory",
+    "./assets/cloths/accessory (1).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (2).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (3).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (4).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (5).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (6).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (7).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (8).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (9).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (10).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (11).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (12).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (13).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (14).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (15).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (16).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (17).png"
+  ],
+  [
+    "accessory",
+    "./assets/cloths/accessory (18).png"
+  ],
+  [
+    "coat",
+    "./assets/cloths/coat (1).png"
+  ],
+  [
+    "coat",
+    "./assets/cloths/coat (2).png"
+  ],
+  [
+    "coat",
+    "./assets/cloths/coat (3).png"
+  ],
+  [
+    "coat",
+    "./assets/cloths/coat (4).png"
+  ],
+  [
+    "coat",
+    "./assets/cloths/coat (5).png"
+  ],
+  [
+    "coat",
+    "./assets/cloths/coat (6).png"
+  ],
+  [
+    "coat",
+    "./assets/cloths/coat (7).png"
+  ],
+  [
+    "coat",
+    "./assets/cloths/coat (8).png"
+  ],
+  [
+    "coat",
+    "./assets/cloths/coat (9).png"
+  ],
+  [
+    "coat",
+    "./assets/cloths/coat (10).png"
+  ],
+  [
+    "coat",
+    "./assets/cloths/coat (11).png"
+  ],
+  [
+    "coat",
+    "./assets/cloths/coat (12).png"
+  ],
+  [
+    "coat",
+    "./assets/cloths/coat (13).png"
+  ],
+  [
+    "coat",
+    "./assets/cloths/coat (14).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (1).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (2).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (3).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (4).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (5).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (6).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (7).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (8).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (9).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (10).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (11).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (12).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (13).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (14).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (15).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (16).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (17).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (18).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (19).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (20).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (21).png"
+  ],
+  [
+    "shirt",
+    "./assets/cloths/shirts (22).png"
+  ],
+  [
+    "shoe",
+    "./assets/cloths/shoe (1).png"
+  ],
+  [
+    "shoe",
+    "./assets/cloths/shoe (2).png"
+  ],
+  [
+    "shoe",
+    "./assets/cloths/shoe (3).png"
+  ],
+  [
+    "shoe",
+    "./assets/cloths/shoe (4).png"
+  ],
+  [
+    "shoe",
+    "./assets/cloths/shoe (5).png"
+  ],
+  [
+    "shoe",
+    "./assets/cloths/shoe (6).png"
+  ],
+  [
+    "shoe",
+    "./assets/cloths/shoe (7).png"
+  ],
+  [
+    "shoe",
+    "./assets/cloths/shoe (8).png"
+  ],
+  [
+    "shoe",
+    "./assets/cloths/shoe (9).png"
+  ],
+  [
+    "shoe",
+    "./assets/cloths/shoe (10).png"
+  ],
+  [
+    "shoe",
+    "./assets/cloths/shoe (11).png"
+  ],
+  [
+    "shoe",
+    "./assets/cloths/shoe (12).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (1).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (2).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (3).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (4).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (5).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (6).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (7).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (8).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (9).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (10).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (11).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (12).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (13).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (14).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (15).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (16).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (18).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (19).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (20).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (21).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (22).png"
+  ],
+  [
+    "under",
+    "./assets/cloths/under (23).png"
+  ]
+]
